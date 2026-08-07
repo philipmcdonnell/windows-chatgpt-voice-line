@@ -1,0 +1,7 @@
+{
+  "assistant_name": "Alfred",
+  "user_name": "Your Name",
+  "codex_workspace": "C:\\Users\\YOUR-USERNAME\\Documents\\your-codex-workspace",
+  "voice": "bm_george",
+  "forms_of_address": ["sir", "kind sir"]
+}

@@ -1,0 +1,19 @@
+name: Verify package
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  verify:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          python-version: "3.12"
+      - run: uv venv --python 3.12 .venv
+      - run: uv pip install --python .venv/Scripts/python.exe -r requirements.txt
+      - run: powershell -NoProfile -ExecutionPolicy Bypass -File ./verify-package.ps1
+      - run: .venv/Scripts/python.exe -m compileall -q .
+      - run: .venv/Scripts/python.exe -m unittest discover -s tests -v

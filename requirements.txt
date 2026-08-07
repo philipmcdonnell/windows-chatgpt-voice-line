@@ -1,0 +1,7 @@
+httpx==0.28.1
+kokoro-onnx==0.5.0
+numpy==2.5.1
+openai-codex==0.144.4
+pynput==1.8.2
+sounddevice==0.5.5
+soundfile==0.14.0

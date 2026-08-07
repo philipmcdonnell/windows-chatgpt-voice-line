@@ -1,0 +1,11 @@
+.venv/
+config.json
+__pycache__/
+*.py[cod]
+.voice_state
+.voice_waveform
+.voice_loading_pid
+models/
+tools/
+whisper-server.stdout.log
+whisper-server.stderr.log
